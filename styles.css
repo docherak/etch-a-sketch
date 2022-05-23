@@ -1,7 +1,7 @@
 :root {
   --cell-bg-color: #FAEBD7;
   --container-resolution: 500px;
-  --grid-resolution: 16;
+  --grid-resolution: 24;
   --options-hg: 20px;
 }
 
@@ -25,6 +25,12 @@
 
 #cell:hover {
   background-color: blue;
+}
+
+#cell-pixels {
+  background-color: white;
+  height: var(--options-hg);
+  width: var(--options-hg);
 }
 
 
@@ -79,7 +85,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-image: url('./assets/guts.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 header {
@@ -106,7 +115,6 @@ section.options {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
   gap: 5%;
 }
 
@@ -127,7 +135,7 @@ button {
   border: none;
   background-color: white;
   font-size: 15px;
-  padding: 0px;
+  padding: 1px;
   text-transform: uppercase;
 }
 
@@ -137,13 +145,20 @@ button:hover {
 }
 
 footer {
-  width: var(--container-resolution);
+  margin-top: 5px;
   text-align: right;
+  background-color: white;
 }
 
 a {
   color: blue;
   text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
 }
 
 a:hover {

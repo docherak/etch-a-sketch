@@ -5,7 +5,7 @@ const output = document.getElementById('cell-pixels');
 output.innerHTML = slider.value;
 
 
-createGrid(16);
+createGrid(24);
 
 
 // Functions
