@@ -1,7 +1,8 @@
 :root {
   --cell-bg-color: #FAEBD7;
+  --cell-bg-color-var: blue;
   --container-resolution: 500px;
-  --grid-resolution: 24;
+  --grid-resolution: 36;
   --options-hg: 20px;
 }
 
@@ -24,10 +25,10 @@
 }
 
 #cell:hover {
-  background-color: blue;
+  background-color: var(--cell-bg-color-var);
 }
 
-#cell-pixels {
+#cellPixels {
   background-color: white;
   height: var(--options-hg);
   width: var(--options-hg);
@@ -40,8 +41,10 @@
   flex-wrap: wrap;
   height: var(--container-resolution);
   width: var(--container-resolution);
+  background-color: var(--cell-bg-color);
   border-right: 2px dashed black;
   border-left: 2px dashed black;
+  gap: 0px;
 }
 
 .slider-cont {
@@ -55,6 +58,7 @@
   margin: 0;
   width: 100%;
   height: var(--slider-res);
+  cursor: pointer;
   background: blue;
   appearance: none;
   -webkit-appearance: none;
@@ -140,8 +144,12 @@ button {
 }
 
 button:hover {
-  color: blue;
   cursor: pointer;
+  color: blue;
+}
+
+button.active {
+  color: blue;
 }
 
 footer {
